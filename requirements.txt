@@ -2,3 +2,4 @@ streamlit-chat
 nltk
 keras
 tensorflow
+hydralit
