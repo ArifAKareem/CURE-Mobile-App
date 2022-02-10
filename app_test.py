@@ -61,6 +61,10 @@ def chatbot_response(msg):
     res = getResponse(ints, intents)
     return res
 
+if user_input:
+    output = {'generated_text': 'hello'}
+    st.session_state.past.append(user_input)
+    st.session_state.generated.append(output["generated_text"])
 
 if st.session_state['generated']:
 
