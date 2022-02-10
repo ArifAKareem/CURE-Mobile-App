@@ -4,7 +4,7 @@ nltk.download('punkt')
 nltk.download('wordnet')
 import numpy as np
 import streamlit as st 
-import streamlit_chat
+#import streamlit_chat
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
