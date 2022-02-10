@@ -68,9 +68,9 @@ st.set_page_config(
 
 #API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
 #headers = {"Authorization": st.secrets['api_key']}
-
+#######################################################STREAMLIT APPLICATION#######################################
 st.header("Streamlit Chat - Demo")
-
+st.markdown("https://share.streamlit.io/arifakareem/cure-research-repository/main/hello.py", unsafe_allow=True)
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
 
@@ -78,7 +78,11 @@ if 'past' not in st.session_state:
     st.session_state['past'] = []
 user_input = st.text_input('')
 if user_input:
-    output = {'generated_text': 'hello','past': 'hey'}
+      
+    prediction = predict_class(user_input, model)
+    intent = prediction[0]['intent']
+    response = getResponse(ints, in
+    output = {'generated_text': response}
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output["generated_text"])
 
