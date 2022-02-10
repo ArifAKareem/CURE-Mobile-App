@@ -8,10 +8,10 @@ import streamlit as st
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
-words = pickle.load(open('/content/words(3).pkl','rb'))
-classes = pickle.load(open('/content/classes(3).pkl','rb'))
+words = pickle.load(open('words.pkl','rb'))
+classes = pickle.load(open('classes.pkl','rb'))
 from keras.models import load_model
-model = load_model('/content/chatbot_model.h5')
+model = load_model('chatbot_model.h5')
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
