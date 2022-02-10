@@ -60,7 +60,7 @@ def chatbot_response(msg):
     ints = predict_class(msg, model)
     res = getResponse(ints, intents)
     return res
-
+user_input = st.text_input('')
 if user_input:
     output = {'generated_text': 'hello'}
     st.session_state.past.append(user_input)
