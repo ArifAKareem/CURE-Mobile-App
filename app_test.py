@@ -79,7 +79,7 @@ if 'past' not in st.session_state:
     st.session_state['past'] = []
 user_input = st.text_input('')
 if user_input:
-    output = {'generated_text': 'hello',
+    output = {'generated_text': 'hello',\
              'past': 'hey'}
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output["generated_text"])
