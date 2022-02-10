@@ -70,7 +70,8 @@ st.set_page_config(
 #headers = {"Authorization": st.secrets['api_key']}
 #######################################################STREAMLIT APPLICATION#######################################
 st.header("Streamlit Chat - Demo")
-st.markdown("https://share.streamlit.io/arifakareem/cure-research-repository/main/hello.py", unsafe_allow=True)
+  
+st.markdown(<iframe src="https://share.streamlit.io/arifakareem/cure-research-repository/main/hello.py" title="description"></iframe>, unsafe_allow=True)
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
 
