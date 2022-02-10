@@ -1,3 +1,4 @@
 streamlit-chat
 nltk
 keras
+tensorflow
