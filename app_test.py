@@ -3,6 +3,8 @@ import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
 import numpy as np
+import streamlit as st 
+import streamlit_chat
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
@@ -59,3 +61,9 @@ def chatbot_response(msg):
     res = getResponse(ints, intents)
     return res
 
+
+if st.session_state['generated']:
+
+    for i in range(len(st.session_state['generated'])-1, -1, -1):
+        message(st.session_state["generated"][i], key=str(i))
+        message(st.session_state['past'][i], is_user=True, key=str(i) + '_user'
